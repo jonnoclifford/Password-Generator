@@ -92,11 +92,11 @@ const upperCasedCharacters = [
 function getColor() {
   const color = prompt("Choose your color red 🔴 or blue 🔵");
   if (color.toLowerCase() !== 'red' && color.toLowerCase() !== 'r' && color.toLowerCase() !== 'red 🔴' && color !== '🔴') {
-    alert("You have chosen poorly....try again");
+    alert("You have chosen poorly....try again 💤");
     return getColor();
   }
 
-  alert("Good choice...you may proceed");
+  alert("Good choice...you may proceed 🐇");
   return getPasswordOptions();
 }
 
@@ -144,7 +144,7 @@ function generatePassword(options) {
     password += randomChar;
   }
 
-  alert("You have entered the Matrix.");
+  alert("You have entered the Matrix 😎");
 
   return password;
 }
