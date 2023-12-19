@@ -156,7 +156,16 @@ function getRandom(arr) {
 // Function to generate password with user input
 
 function generatePassword() {
+  const options = getPasswordOptions();
+  let password = '';
 
+  for (let i = 0; i < options.length; i++) {
+    const randomChar = getRandom(options.charOptions);
+    password += randomChar;
+  }
+
+  return password;
+}
   // Generate a password when the button is clicked
   // Present a series of prompts for password criteria
   // Length of password
@@ -170,7 +179,6 @@ function generatePassword() {
   // Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
 
-}
 
 // Get references to the #generate element
 const generateBtn = document.querySelector('#generate');
