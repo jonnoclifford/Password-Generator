@@ -89,9 +89,20 @@ const upperCasedCharacters = [
 ];
 
 
+function getColor() {
+  const color = prompt("Choose your color red 🔴 or blue 🔵");
+  if (color.toLowerCase() !== 'red' && color.toLowerCase() !== 'r' && color !== '🔴') {
+    alert("You have chosen poorly....try again");
+    return getColor();
+  }
+
+  alert("Good choice...you may proceed");
+  return getPasswordOptions();
+}
+
 function getPasswordOptions() {
 
-  const length = prompt("Enter the length of the password (between 8 and 128 characters):");
+    const length = prompt("Enter the length of the password (between 8 and 128 characters):");
 
 
     if (!length || isNaN(length) || length < 8 || length > 128) {
@@ -125,8 +136,7 @@ function getRandom(arr) {
   return arr[randomIndex];
 }
 
-function generatePassword() {
-  const options = getPasswordOptions();
+function generatePassword(options) {
   let password = '';
 
   for (let i = 0; i < options.length; i++) {
@@ -134,15 +144,20 @@ function generatePassword() {
     password += randomChar;
   }
 
+  alert("You have entered the Matrix.");
+
   return password;
 }
+
 
 const generateBtn = document.querySelector('#generate');
 
 function writePassword() {
-  const password = generatePassword();
+  const options = getColor();
+  const password = generatePassword(options);
   const passwordText = document.querySelector('#password');
   passwordText.value = password;
 }
+
 
 generateBtn.addEventListener('click', writePassword);
