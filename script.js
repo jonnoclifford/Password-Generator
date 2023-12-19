@@ -93,8 +93,11 @@ const upperCasedCharacters = [
 
 // Function to prompt user for password options
 function getPasswordOptions() {
+
   // Prompt for password length
   // At least 8 numericCharacters, no more than 128 characters
+  const length = prompt("Enter the length of the password (between 8 and 128 characters):");
+
   // Conditional to check that the number that was entered is in range
   // Prompts store data as strings, so need to parse into a number
   //  If the user's input is out of rnage, either return out of the function or call the function again
