@@ -137,6 +137,10 @@ function getPasswordOptions() {
 
 // Function for getting a random element from an array
 function getRandom(arr) {
+
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+
   // Need a variable to hold the password as it's being generated
   // Need a variable to hold the index that's being generated
 
