@@ -91,7 +91,7 @@ const upperCasedCharacters = [
 
 function getColor() {
   const color = prompt("Choose your color red 🔴 or blue 🔵");
-  if (color.toLowerCase() !== 'red' && color.toLowerCase() !== 'r' && color !== '🔴') {
+  if (color.toLowerCase() !== 'red' && color.toLowerCase() !== 'r' && color.toLowerCase() !== 'red 🔴' && color !== '🔴') {
     alert("You have chosen poorly....try again");
     return getColor();
   }
