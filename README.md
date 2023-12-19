@@ -1,4 +1,4 @@
-# JavaScript - Homework 2:  Password-Generator
+# JavaScript - Homework 2: Password-Generator
 Module 5 Challenge: Password Generator
 
 ## Description
