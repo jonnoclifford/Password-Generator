@@ -99,6 +99,10 @@ function getPasswordOptions() {
   const length = prompt("Enter the length of the password (between 8 and 128 characters):");
 
   // Conditional to check that the number that was entered is in range
+    if (!length || isNaN(length) || length < 8 || length > 128) {
+      alert("Invalid password length. Please enter a valid length between 8 and 128 characters.");
+      return getPasswordOptions();
+    }
   // Prompts store data as strings, so need to parse into a number
   //  If the user's input is out of rnage, either return out of the function or call the function again
 
@@ -150,7 +154,6 @@ const generateBtn = document.querySelector('#generate');
 function writePassword() {
   const password = generatePassword();
   const passwordText = document.querySelector('#password');
-
   passwordText.value = password;
 }
 
