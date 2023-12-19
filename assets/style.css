@@ -41,7 +41,7 @@ h1 {
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   font-family: 'VT323', monospace;
   text-align: center;
   border-radius: 5px;
