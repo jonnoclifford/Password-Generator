@@ -103,11 +103,25 @@ function getPasswordOptions() {
       alert("Invalid password length. Please enter a valid length between 8 and 128 characters.");
       return getPasswordOptions();
     }
+
+      //  Confirm which character set to use
+  // If the user answers false for all, either return out of the fnction or call again
+
+  const includeLower = confirm("Include lowercase characters?");
+  const includeUpper = confirm("Include uppercase characters?");
+  const includeNumeric = confirm("Include numeric characters?");
+  const includeSpecial = confirm("Include special characters?");
+
+    if (!(includeLower || includeUpper || includeNumeric || includeSpecial)) {
+      alert("At least one character type must be selected.");
+      return getPasswordOptions();
+    }
+
+    return { length };
   // Prompts store data as strings, so need to parse into a number
   //  If the user's input is out of rnage, either return out of the function or call the function again
 
-  //  Confirm which character set to use
-  // If the user answers false for all, either return out of the fnction or call again
+
   // Once the user selects a character set:
   // Generate a random character for each selected character
   // EITHER - EASIER OPTION: push selected character sets to a mega-array of all selected characters
