@@ -117,7 +117,14 @@ function getPasswordOptions() {
       return getPasswordOptions();
     }
 
-    return { length };
+  charOptions.length = 0;
+
+    if (includeLower) charOptions.push(...lowerCasedCharacters);
+    if (includeUpper) charOptions.push(...upperCasedCharacters);
+    if (includeNumeric) charOptions.push(...numericCharacters);
+    if (includeSpecial) charOptions.push(...specialCharacters);
+
+    return { length, charOptions };
   // Prompts store data as strings, so need to parse into a number
   //  If the user's input is out of rnage, either return out of the function or call the function again
 
