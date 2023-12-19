@@ -91,7 +91,6 @@ const upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
 function getPasswordOptions() {
 
   // Prompt for password length
